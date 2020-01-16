@@ -128,6 +128,7 @@ input.input-box {
 	letter-spacing:.1em;
 	background-color:transparent;
 		border: solid #646464 1px;
+		border-radius:0;
 	margin: 4px 0 25px 0;
 }
 
@@ -159,6 +160,7 @@ input[type="checkbox"] {
   width: 1.4em;
   height: 1.4em;
 		border: solid #646464 1px;
+	border-radius:0;
   background-color:transparent;
 	margin-right:10px;
   /* Adjusts the ; of the checkboxes on the text baseline */ 
