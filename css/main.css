@@ -113,9 +113,17 @@ h5 {
 	cursor: pointer;
 	border-radius:0;
 }
-.btn-main:hover{
+.btn-main:hover, .btn-main:active {
 	background-color:#000;
 	color:white;
+	
+		text-transform: uppercase;
+	padding:14px 28px;
+	letter-spacing:.1em;
+		border: solid 1.5px #000;
+	margin:4px 4px 0 0;
+	cursor: pointer;
+	border-radius:0;
 }
 
 /****Global Form Styles******/
