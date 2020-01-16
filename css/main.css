@@ -124,22 +124,17 @@ h5 {
 input.input-box {
 	text-transform: uppercase;
 	padding:14px 16px;
-	min-width:300px;
 	letter-spacing:.1em;
 	background-color:transparent;
 		border: solid #646464 1px;
-		border-radius:0;
+		border-radius:0!important;
 	margin: 4px 0 25px 0;
 }
-
-
-/*Custom checkbox styles*/
 
 /*checkbox label*/
 .container {
   display: block;
   position: relative;
-/*  padding-left: 35px;*/
   margin-bottom: 10px;
 	padding-top: 3px;
     cursor: pointer;
@@ -150,49 +145,6 @@ input.input-box {
   user-select: none;
 }
 
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-}
-input[type="checkbox"] {
-  position: relative;
-  cursor: pointer;
-  width: 1.4em;
-  height: 1.4em;
-		border: solid #646464 1px;
-	border-radius:0;
-  background-color:transparent;
-	margin-right:10px;
-  /* Adjusts the ; of the checkboxes on the text baseline */ 
-  vertical-align: -2px;
-  /* Set here so that Windows' High-Contrast Mode can override */
-  color:#000;
-}
-
-input[type="checkbox"]::before {
-  content: "✔";
-	color:white;
-  position: absolute;
-  font-weight:800;
-  font-size: .9em;
-  left: .3em;
-  top: 0;
-  visibility: hidden;
-}
-
-input[type="checkbox"]:checked::before {
-  /* Use `visibility` instead of `display` to avoid recalculating layout */
-  visibility: visible;
-}
-input[type="checkbox"]:checked {
-  background-color:black;
-}
-
-input[type="checkbox"]:disabled {
-  border-color: black;
-  background: #ddd;
-  color: gray;
-}
 
 
 /*********HEADER STYLES**********/
@@ -232,7 +184,55 @@ a.nav-link {
 	section#main-content{	
   padding:10% 20%;
 		}
+/*form styling*/
+	
+	input.input-box {
+	min-width:300px;
+	}
+	
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  width: 1.4em;
+  height: 1.4em;
+		border: solid #646464 1px;
+	border-radius:0;
+  background-color:transparent;
+	margin-right:10px;
+  /* Adjusts the ; of the checkboxes on the text baseline */ 
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color:#000;
+}
 
+input[type="checkbox"]::before {
+  content: "✔";
+	color:white!important;
+  position: absolute;
+  font-weight:800;
+  font-size: .9em;
+  left: .3em;
+  top: 0;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+input[type="checkbox"]:checked {
+  background-color:black;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
 	
 	/*********HEADER STYLES*********/
 .topnav {
@@ -288,6 +288,10 @@ a.nav-link:hover {
 		section#main-content{	
   padding:15px 25px;
 		}
+	/*form styling*/
+	input.input-box {
+	max-width:90vw;
+	}
 		/*********HEADER STYLES*********/
 	#header {
 		position:fixed;
