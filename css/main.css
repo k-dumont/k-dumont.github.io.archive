@@ -112,6 +112,7 @@ h5 {
 	margin:4px 4px 0 0;
 	cursor: pointer;
 	border-radius:0;
+	font-size:14px;
 }
 .btn-main:hover, .btn-main:active {
 	background-color:#000;
@@ -296,7 +297,7 @@ a.nav-link:hover {
 @media screen and (max-width: 728px) {
 	/**********MAIN CONTENT STYLES*********/
 	.mobile-header-spacer {
-		height:110px;
+		height:120px;
 	}
 		section#main-content{	
   padding:15px 25px;
