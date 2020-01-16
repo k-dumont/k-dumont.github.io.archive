@@ -260,6 +260,10 @@ a.nav-link:hover {
 	margin-left:10px;
 	margin-right:10px;
 }
+			a.nav-link.active:hover {
+	  color: black;
+			cursor:default;
+}
 	.pet-division-logo-desktop {
 	  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
@@ -331,7 +335,6 @@ display: inline;
 		a.nav-link.active:hover {
   background-color: #ddd;
 			 color:#3E3E3E;	
-			cursor:default;
 }
 	/* Change the color of links on hover */
 a.nav-link:hover {
