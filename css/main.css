@@ -24,6 +24,7 @@ time, mark, audio, video {
 	font-size: 100%;
 /*	font: inherit;*/
 	vertical-align: baseline;
+	text-decoration: none;
 }
  HTML5 display-role reset for older browsers 
 article, aside, details, figcaption, figure, 
@@ -58,7 +59,9 @@ table {
 font-family:'montserrat',sans-serif;
 	line-height: 1.3em;
 }
-
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom:20px;
+}
 h1 {
 	font-size:2.2em;
 }
@@ -123,8 +126,8 @@ input.input-box {
 	padding:14px 16px;
 	min-width:300px;
 	letter-spacing:.1em;
-	background-color:#Eee;
-		border: solid 0px #D4D4D4;
+	background-color:transparent;
+		border: solid #646464 1px;
 	margin: 4px 0 25px 0;
 }
 
@@ -155,8 +158,8 @@ input[type="checkbox"] {
   cursor: pointer;
   width: 1.4em;
   height: 1.4em;
-  border: 0px solid #ddd;
-  background-color:#Eee;
+		border: solid #646464 1px;
+  background-color:transparent;
 	margin-right:10px;
   /* Adjusts the ; of the checkboxes on the text baseline */ 
   vertical-align: -2px;
@@ -170,8 +173,8 @@ input[type="checkbox"]::before {
   position: absolute;
   font-weight:800;
   font-size: .9em;
-  left: .4em;
-  top: .2em;
+  left: .3em;
+  top: 0;
   visibility: hidden;
 }
 
@@ -192,16 +195,11 @@ input[type="checkbox"]:disabled {
 
 /*********HEADER STYLES**********/
 
-/* Links inside the navigation bar */
-#header-logo {
-	padding:25px;
-	float:left;
-}
-
+/*Style for all screens*/
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #eee;
+  background-color: white;
   overflow: hidden;
 }
 
@@ -209,23 +207,14 @@ input[type="checkbox"]:disabled {
 a.nav-link {
   float: right;
   display: block;
-  color: #f2f2f2;
+  color: #000;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-a.nav-link:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add an active class to highlight the current page */
-a.nav-link.active {
-  background-color: #4CAF50;
-  color: white;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+  font-size: 13px;
+	font-weight: 500;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -234,37 +223,103 @@ a.nav-link.active {
 }
 
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
+/**********************DESKTOP/TABLET ONLY********************/
+@media screen and (min-width: 729px) {
 
-/*
-******MOBILE HEADER STYLES*****
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 728px) {
+	/**********MAIN CONTENT STYLES*********/
+	section#main-content{	
+  padding:10% 20%;
+		}
+
 	
+	/*********HEADER STYLES*********/
+.topnav {
+	justify-content: flex-end;
+align-items: center;
+	display: flex;
+	height:100px;
+}
+	
+#header-logo {
+	padding:20px 25px;
+position: absolute;
+    left: 0;
+	top:0;
+}
+	/* Add an active class to highlight the current page */
+a.nav-link.active {
+  background-color: transparent;
+  border: solid black 1px;
+}
+	/* Change the color of links on hover */
+a.nav-link:hover {
+/*  background-color: #ddd;*/
+  color: #615959;
+}
+	a.nav-link {
+	margin-left:10px;
+	margin-right:10px;
+}
+}
+
+/**********************MOBILE ONLY********************/
+@media screen and (max-width: 728px) {
+	/**********MAIN CONTENT STYLES*********/
+	.mobile-header-spacer {
+		height:110px;
+	}
+		section#main-content{	
+  padding:15px 25px;
+		}
+		/*********HEADER STYLES*********/
+	#header {
+		position:fixed;
+	width:100%;
+		z-index: 1000;
+	}
+	div#myTopnav {
+    border-bottom: solid 2px #9a9a9a;
+}
 	#header-logo {
 		height:50px;
 		width:auto;
-			position:fixed;
 		padding:20px 25px;
 	}
 	
-	.top-nav {
-
-	}
-	
   .topnav a:not(:first-child) {display: none;}
-	.topnav a:nth-child(2) {
+	
+	.topnav .nav-link:nth-child(1) {
     margin-top: 90px;
 	}
+	em.close-nav {
+		display:none;
+	}
   .topnav a.icon {
+display: inline;
     float: right;
-    display: block;
  color:#000;
 		padding:25px;
 		font-size:30px;
+}
+	a.nav-link {
+		background-color:#101010;
+		border-top:solid #eee 1px;
+		color:white;
+		padding:25px 15px;
+	}
+	a.nav-link.active {
+  background-color: #ddd;
+ color:#3E3E3E;
+}
+		a.nav-link.active:hover {
+  background-color: #ddd;
+			 color:#3E3E3E;	
+			cursor:default;
+}
+	/* Change the color of links on hover */
+a.nav-link:hover {
+  background-color: #474747;
+  color: white;
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -280,22 +335,16 @@ a.nav-link.active {
     display: block;
     text-align: center;
   }
+	
+	.topnav.responsive em.open-nav {
+		display:none;
+	}
+		.topnav.responsive em.close-nav {
+		display:inline;
+	}
 }
-
 
 /**********END HEADER STYLES**********/
 
 
-/**********MAIN CONTENT STYLES*********/
 
-section#main-content{	
-  padding:10% 20%;
-		}
-	
-/*landing page email sign-up form*/
-/*
-
-form#signup-form {
-	
-}
-*/
