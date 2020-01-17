@@ -108,11 +108,12 @@ h5 {
 	padding:14px 28px;
 	letter-spacing:.1em;
 	background-color:transparent;
-		border: solid 1.5px #000;
+		border: solid black 1px;
 	margin:4px 4px 0 0;
 	cursor: pointer;
 	border-radius:0;
 	font-size:14px;
+	font-weight: 600;
 }
 .btn-main:hover, .btn-main:active {
 	background-color:#000;
@@ -305,7 +306,7 @@ a.nav-link:hover {
 	/*form styling*/
 	input.input-box {
 	min-width:80vw;
-		max-width: 95vw;
+		max-width: 90vw;
 	}
 		/*********HEADER STYLES*********/
 	#header {
